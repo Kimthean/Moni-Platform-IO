@@ -1,0 +1,69 @@
+# TFT_eSPI Configuration
+
+This project uses the TFT_eSPI library for display functions.
+
+## Setup Instructions
+
+1. The custom configuration file `User_Setup.h` in this folder needs to be copied to the TFT_eSPI library directory.
+
+2. In your PlatformIO environment:
+   - Go to `.pio/libdeps/4d_systems_esp32s3_gen4_r8n16/TFT_eSPI/`
+   - Replace the `User_Setup.h` file there with the one from this folder
+   - Alternatively, edit the `User_Setup_Select.h` file to include our custom User_Setup.h
+
+## Configuration Details
+
+The configuration is set up for an ESP32-S3 with ST7789 display using the following pins:
+- CS: 15
+- DC: 16  
+- RST: 17
+- MOSI: 13
+- SCLK: 14
+
+The display dimensions are set to 240x340.
+
+This directory is intended for project specific (private) libraries.
+PlatformIO will compile them to static libraries and link into the executable file.
+
+The source code of each library should be placed in a separate directory
+("lib/your_library_name/[Code]").
+
+For example, see the structure of the following example libraries `Foo` and `Bar`:
+
+|--lib
+|  |
+|  |--Bar
+|  |  |--docs
+|  |  |--examples
+|  |  |--src
+|  |     |- Bar.c
+|  |     |- Bar.h
+|  |  |- library.json (optional. for custom build options, etc) https://docs.platformio.org/page/librarymanager/config.html
+|  |
+|  |--Foo
+|  |  |- Foo.c
+|  |  |- Foo.h
+|  |
+|  |- README --> THIS FILE
+|
+|- platformio.ini
+|--src
+   |- main.c
+
+Example contents of `src/main.c` using Foo and Bar:
+```
+#include <Foo.h>
+#include <Bar.h>
+
+int main (void)
+{
+  ...
+}
+
+```
+
+The PlatformIO Library Dependency Finder will find automatically dependent
+libraries by scanning project source files.
+
+More information about PlatformIO Library Dependency Finder
+- https://docs.platformio.org/page/librarymanager/ldf.html
