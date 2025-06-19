@@ -3,3 +3,13 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+
+# Environment variables and secrets
+.env
+
+# macOS files
+.DS_Store
+
+
+spotify-auth-server/node_modules
+spotify-auth-server/.env

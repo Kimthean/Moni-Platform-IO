@@ -22,20 +22,15 @@
 #define COLOR_YELLOW 0xFFE0
 #define COLOR_ORANGE 0xFD20
 #define COLOR_GOLD 0xFEA0
+#define COLOR_SILVER 0xC618
+#define COLOR_GRAY 0x8410
 
 // WiFi Configuration
-#define WIFI_SSID "DREAMSLAB UNIFY"
-#define WIFI_PASSWORD "@DREAMSLAB2023"
-// Remove or comment out these lines:
-// #define WIFI_SSID "Thean Room 2.4"
-// #define WIFI_PASSWORD "Thean016"
-// #define WIFI_TIMEOUT 20000 // 20 seconds
-
-// Keep only the timeout for SmartConfig connections
+// WIFI_SSID and WIFI_PASSWORD are now defined via build flags from environment variables
 #define WIFI_TIMEOUT 15000 // 15 seconds for stored credential attempts
 
 // Weather Configuration
-#define WEATHER_API_KEY "bc6f7fa1f07b2a1f93a4b43adacdac93"
+// WEATHER_API_KEY is now defined via build flags from environment variables
 #define WEATHER_UPDATE_INTERVAL 600000 // 10 minutes in milliseconds
 
 // Time Configuration
@@ -53,3 +48,6 @@
 // UI Configuration
 #define UI_UPDATE_INTERVAL 50 // 50ms for animations
 #define UI_BACKGROUND COLOR_BLACK
+
+// Spotify API Configuration
+// SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, and SPOTIFY_REFRESH_TOKEN are now defined via build flags from environment variables
